@@ -70,6 +70,10 @@ export default function ProfileScreen() {
         ListEmptyComponent={
           <Text style={styles.empty}>
             Your first post will appear here once you publish it from the feed.
+            I will leave it empty for now to show you what the screen looks like
+            without any posts. The profile summary card above should have your
+            profile information and stats, and the buttons should allow you to
+            sign out or reset the demo state.
           </Text>
         }
         ItemSeparatorComponent={() => <View style={styles.separator} />}
