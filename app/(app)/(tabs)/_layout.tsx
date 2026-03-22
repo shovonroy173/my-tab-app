@@ -3,6 +3,7 @@ import { Tabs } from "expo-router";
 
 import { rh } from "@/src/shared/theme/responsive";
 import { colors, componentSize } from "@/src/shared/theme/tokens";
+import { View } from "react-native";
 
 export default function AppTabsLayout() {
   return (
@@ -43,7 +44,18 @@ export default function AppTabsLayout() {
         options={{
           title: "Upload",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="add-circle-outline" color={color} size={size} />
+            <View
+              style={{
+                width: size + 12,
+                height: size + 12,
+                borderRadius: (size + 12) / 2,
+                backgroundColor: colors.accent,
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Ionicons name="add-circle-outline" color={color} size={size} />
+            </View>
           ),
         }}
       />
